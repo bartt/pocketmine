@@ -6,7 +6,7 @@ RUN apt-get upgrade -y
 RUN apt-get -y install m4 automake autoconf make gcc libtool curl
 
 RUN mkdir /pocketmine
-RUN cd /pocketmine && curl -sL http://cdn.pocketmine.net/installer.sh | bash -s -
+RUN cd /pocketmine && curl -sL http://cdn.pocketmine.net/installer.sh | bash -s - -v development
 ADD server.properties /pocketmine/
 
 VOLUME /pocketmine
