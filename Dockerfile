@@ -6,7 +6,7 @@ RUN apt-get upgrade -y
 RUN apt-get -y install m4 automake autoconf make gcc libtool curl python3-yaml
 
 RUN mkdir /pocketmine
-RUN cd /pocketmine && curl -sL http://cdn.pocketmine.net/installer.sh | bash -s - -v development
+RUN cd /pocketmine && curl -sL http://cdn.pocketmine.net/installer.sh | bash -s - -r -v development
 
 VOLUME /pocketmine
 WORKDIR /pocketmine
